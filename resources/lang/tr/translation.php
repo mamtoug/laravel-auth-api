@@ -1,4 +1,5 @@
 <?php
+
 return [
     'failed_authentication' => 'Yanlış kimlik bilgileri! Lütfen tekrar deneyin',
     'account_created' => 'Hesap başarıyla oluşturuldu',

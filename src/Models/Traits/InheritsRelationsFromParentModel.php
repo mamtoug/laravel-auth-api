@@ -54,7 +54,7 @@ trait InheritsRelationsFromParentModel
 
     public function joiningTable($related, $instance = null)
     {
-        $relatedClassName = method_exists((new $related()), 'getClassNameForRelationships')
+        $relatedClassName = method_exists(new $related(), 'getClassNameForRelationships')
             ? (new $related())->getClassNameForRelationships()
             : class_basename($related);
         $models = [
