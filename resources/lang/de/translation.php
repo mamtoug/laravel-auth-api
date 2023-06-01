@@ -1,4 +1,5 @@
 <?php
+
 return [
     'failed_authentication' => 'Falsche Anmeldeinformationen! Bitte versuche es erneut',
     'account_created' => 'Konto erfolgreich erstellt',

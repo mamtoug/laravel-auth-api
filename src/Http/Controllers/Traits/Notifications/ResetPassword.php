@@ -59,7 +59,7 @@ class ResetPassword extends Notification
             ->subject(trans('translation.reset_password.notification.subject'))
             ->line(trans('translation.reset_password.notification.line_1'))
             ->action($this->token, '')
-            ->line(trans('translation.reset_password.notification.line_2' , ['count' => config('auth.passwords.'.config('auth.defaults.passwords').'.expire')]))
+            ->line(trans('translation.reset_password.notification.line_2', ['count' => config('auth.passwords.'.config('auth.defaults.passwords').'.expire')]))
             ->line(trans('translation.reset_password.notification.line_3'));
     }
 

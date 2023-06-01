@@ -47,5 +47,5 @@ return [
         'find_associated' => 'find an associated user account with this :provider_name account',
         'user_created' => 'new user account and social account has been created.',
         'social_account_created_for_user' => 'new social account has been created for :name',
-    ]
+    ],
 ];

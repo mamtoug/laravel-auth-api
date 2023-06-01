@@ -1,4 +1,5 @@
 <?php
+
 return [
     'failed_authentication' => 'Credenziali sbagliate! Per favore riprova',
     'account_created' => 'Account creato con successo',
