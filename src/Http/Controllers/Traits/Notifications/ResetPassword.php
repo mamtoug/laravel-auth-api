@@ -59,7 +59,7 @@ class ResetPassword extends Notification
             ->subject(__('laravel-auth-api::translation.reset_password.notification.subject'))
             ->line(__('laravel-auth-api::translation.reset_password.notification.line_1'))
             ->action($this->token, '')
-            ->line(__('laravel-auth-api::translation.reset_password.notification.line_2' , ['count' => config('auth.passwords.'.config('auth.defaults.passwords').'.expire')]))
+            ->line(__('laravel-auth-api::translation.reset_password.notification.line_2', ['count' => config('auth.passwords.'.config('auth.defaults.passwords').'.expire')]))
             ->line(__('laravel-auth-api::translation.reset_password.notification.line_3'));
     }
 

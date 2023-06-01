@@ -1,4 +1,5 @@
 <?php
+
 return [
     'failed_authentication' => 'أوراق اعتماد خاطئة! حاول مرة اخرى',
     'account_created' => 'الحساب اقيم بنجاح',

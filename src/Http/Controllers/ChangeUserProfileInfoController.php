@@ -25,8 +25,8 @@ class ChangeUserProfileInfoController extends Controller
 
         $user->update($request->only(
             array_merge(['name', 'email'],
-            array_keys(config('laravel-auth-api.extra_columns'))
-        )));
+                array_keys(config('laravel-auth-api.extra_columns'))
+            )));
         if ($user->email !== $oldEmail) {
             $user->email_verified_at = null;
             $user->save();
