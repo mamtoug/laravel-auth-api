@@ -36,7 +36,7 @@ class ApiLoginRegisterController extends Controller
         $success['access_token'] = $user->createToken('AppName')->accessToken;
         $success['user'] = $user->toArray();
 
-        return  ApiResponse::send($success, 1, 201, trans('laravel-auth-api::translation.account_created'));
+        return  ApiResponse::send($success, 1, 201, __('laravel-auth-api::translation.account_created'));
     }
 
     public function login(LoginRequest $request)
@@ -49,7 +49,7 @@ class ApiLoginRegisterController extends Controller
 
             return ApiResponse::send($success, 1, 200);
         } else {
-            return ApiResponse::send(['error' => 'Unauthorized'], 0, 401, trans('laravel-auth-api::translation.failed_authentication'));
+            return ApiResponse::send(['error' => 'Unauthorized'], 0, 401, __('laravel-auth-api::translation.failed_authentication'));
         }
     }
 
