@@ -39,10 +39,10 @@ class VerifyEmail extends Notification
         }
 
         return (new MailMessage)
-            ->subject(Lang::get('Verify Email Address ['.sprintf('%04d', hexdec(substr(sha1($notifiable->getKey().$notifiable->getEmailForVerification()), 0, 3))).']'))
-            ->line(Lang::get('MedianetDev\LaravelAuthApi\Notifications\VerifyEmail.php '))
+            ->subject(trans('translation.notification.verify_email.subject').' ['.sprintf('%04d', hexdec(substr(sha1($notifiable->getKey().$notifiable->getEmailForVerification()), 0, 3))).']')
+            ->line(trans('translation.notification.verify_email.line_1'))
             ->action(Lang::get(sprintf('%04d', hexdec(substr(sha1($notifiable->getKey().$notifiable->getEmailForVerification()), 0, 3)))), '')
-            ->line(Lang::get('If you did not create an account, no further action is required.'));
+            ->line(trans('translation.notification.verify_email.line_2'));
     }
 
     /**

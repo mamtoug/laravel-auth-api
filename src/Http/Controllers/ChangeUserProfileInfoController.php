@@ -35,12 +35,12 @@ class ChangeUserProfileInfoController extends Controller
                     $user->sendEmailVerificationNotification();
                 } catch (\Throwable $th) {
                     app('log')->warning(
-                        'Cannot send verification email to this address: '.$user->email.'; '.$th->getMessage()
+                        lang('translation.update_account.cannot_send_email_verification').$user->email.'; '.$th->getMessage()
                     );
                 }
             }
         }
 
-        return ApiResponse::send(['status' => 'Account updated successfully'], 1, 200, 'Account updated successfully');
+        return ApiResponse::send(['status' => lang('translation.update_account.success')], 1, 200, lang('translation.update_account.success'));
     }
 }
