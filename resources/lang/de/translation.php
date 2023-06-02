@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => 'Falsche Anmeldeinformationen! Bitte versuche es erneut',
+    'unauthorized' => 'Nicht autorisiert',
     'account_created' => 'Konto erfolgreich erstellt',
     'access' => [
         'users' => [

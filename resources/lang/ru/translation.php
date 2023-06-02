@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => 'Неправильные учетные данные! Пожалуйста, попробуйте еще раз',
+    'unauthorized' => 'Не авторизован',
     'account_created' => 'Учетная запись успешно создана',
     'access' => [
         'users' => [

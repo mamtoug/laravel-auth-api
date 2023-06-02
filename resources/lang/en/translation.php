@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => 'Wrong credentials! Please try again',
+    'unauthorized' => 'Unauthorized',
     'account_created' => 'Account created successfully',
 
     'access' => [

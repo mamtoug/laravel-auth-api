@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => 'أوراق اعتماد خاطئة! حاول مرة اخرى',
+    'unauthorized' => 'غير مصرح',
     'account_created' => 'الحساب اقيم بنجاح',
     'access' => [
         'users' => [

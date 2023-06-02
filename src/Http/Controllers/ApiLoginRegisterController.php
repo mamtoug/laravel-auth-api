@@ -49,7 +49,7 @@ class ApiLoginRegisterController extends Controller
 
             return ApiResponse::send($success, 1, 200);
         } else {
-            return ApiResponse::send(['error' => 'Unauthorized'], 0, 401, __('laravel-auth-api::translation.failed_authentication'));
+            return ApiResponse::send(['error' => __('laravel-auth-api::translation.unauthorized')], 0, 401, __('laravel-auth-api::translation.failed_authentication'));
         }
     }
 

@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => 'Yanlış kimlik bilgileri! Lütfen tekrar deneyin',
+    'unauthorized' => 'Yetkisiz',
     'account_created' => 'Hesap başarıyla oluşturuldu',
     'access' => [
         'users' => [

@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => 'Mauvais identifiants ! Veuillez réessayer',
+    'unauthorized' => 'Non autorisé',
     'account_created' => 'Compte créé avec succès',
     'access' => [
         'users' => [

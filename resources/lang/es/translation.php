@@ -2,6 +2,7 @@
 
 return [
     'failed_authentication' => '¡Credenciales incorrectas! Inténtalo de nuevo',
+    'unauthorized' => 'No autorizado',
     'account_created' => 'Cuenta creada con éxito',
     'access' => [
         'users' => [
