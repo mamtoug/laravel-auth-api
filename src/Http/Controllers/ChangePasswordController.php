@@ -25,6 +25,6 @@ class ChangePasswordController extends Controller
         $user->password = Hash::make($request->new_password);
         $user->save();
 
-        return ApiResponse::send(['status' => 'Password changed successfully'], 1, 200, 'Password changed successfully');
+        return ApiResponse::send(['status' => __('laravel-auth-api::translation.change_password.success')], 1, 200, __('laravel-auth-api::translation.change_password.success'));
     }
 }

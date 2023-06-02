@@ -12,8 +12,7 @@ trait VerifiesEmails
     /**
      * Mark the authenticated user's email address as verified.
      *
-     * @param \Illuminate\Http\Request $request
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      *
      * @throws \Illuminate\Auth\Access\AuthorizationException
@@ -21,35 +20,34 @@ trait VerifiesEmails
     public function verify(Request $request)
     {
         if (! hash_equals((string) $request->route('code'), (string) sprintf('%04d', hexdec(substr(sha1($request->user()->getKey().$request->user()->getEmailForVerification()), 0, 3))))) {
-            return ApiResponse::send(['error' => 'Bad codes.'], 0, 403, 'Bad codes.');
+            return ApiResponse::send(['error' => __('laravel-auth-api::translation.verifies_emails.bad_codes')], 0, 403, __('laravel-auth-api::translation.verifies_emails.bad_codes'));
         }
 
         if ($request->user()->hasVerifiedEmail()) {
-            return ApiResponse::send(['success' => 'email already verified.....'], 1, 200, 'email already verified.....');
+            return ApiResponse::send(['success' => __('laravel-auth-api::translation.verifies_emails.already_verified')], 1, 200, __('laravel-auth-api::translation.verifies_emails.already_verified'));
         }
 
         if ($request->user()->markEmailAsVerified()) {
             event(new Verified($request->user()));
         }
 
-        return ApiResponse::send(['success' => 'email verified successfully'], 1, 200, 'email verified successfully');
+        return ApiResponse::send(['success' => __('laravel-auth-api::translation.verifies_emails.verified_success')], 1, 200, __('laravel-auth-api::translation.verifies_emails.verified_success'));
     }
 
     /**
      * Resend the email verification notification.
      *
-     * @param \Illuminate\Http\Request $request
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function resend(Request $request)
     {
         if (Auth::guard('apiauth')->user()->hasVerifiedEmail()) {
-            return ApiResponse::send(['success' => 'email already verified'], 1, 200, 'email already verified');
+            return ApiResponse::send(['success' => __('laravel-auth-api::translation.verifies_emails.already_verified')], 1, 200, __('laravel-auth-api::translation.verifies_emails.already_verified'));
         }
 
         Auth::guard('apiauth')->user()->sendEmailVerificationNotification();
 
-        return ApiResponse::send(['success' => 'email resended successfully'], 1, 200, 'email resended successfully');
+        return ApiResponse::send(['success' => __('laravel-auth-api::translation.verifies_emails.resent_success')], 1, 200, __('laravel-auth-api::translation.verifies_emails.resent_success'));
     }
 }

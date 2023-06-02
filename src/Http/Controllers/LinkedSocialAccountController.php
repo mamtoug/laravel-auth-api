@@ -20,7 +20,7 @@ class LinkedSocialAccountController extends Controller
                 'flag' => 0,
                 'user' => $socialAccount->user,
                 'access_token' => $socialAccount->user->createToken('AppName')->accessToken,
-            ], 1, 200, "find an associated user account with this $request->provider_name account");
+            ], 1, 200, __('laravel-auth-api::translation.linked_social.find_associated', ['provider_name' => $request->provider_name]));
         }
 
         // try to get a user with the given email address
@@ -44,14 +44,14 @@ class LinkedSocialAccountController extends Controller
                 'flag' => 1,
                 'user' => $user,
                 'access_token' => $user->createToken('AppName')->accessToken,
-            ], 1, 201, 'new user account and social account has been created.');
+            ], 1, 201, __('laravel-auth-api::translation.linked_social.user_created'));
         }
 
         return ApiResponse::send([
             'flag' => 0,
             'user' => $user,
             'access_token' => $user->createToken('AppName')->accessToken,
-        ], 1, 201, "new social account has been created for $request->name.");
+        ], 1, 201, __('laravel-auth-api::translation.linked_social.social_account_created_for_user', ['name' => $request->name]));
     }
 
     private function getSocialAccount(SocialAccountRequest $request)

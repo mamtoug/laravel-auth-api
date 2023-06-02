@@ -25,8 +25,8 @@ class ChangeUserProfileInfoController extends Controller
 
         $user->update($request->only(
             array_merge(['name', 'email'],
-            array_keys(config('laravel-auth-api.extra_columns'))
-        )));
+                array_keys(config('laravel-auth-api.extra_columns'))
+            )));
         if ($user->email !== $oldEmail) {
             $user->email_verified_at = null;
             $user->save();
@@ -35,12 +35,12 @@ class ChangeUserProfileInfoController extends Controller
                     $user->sendEmailVerificationNotification();
                 } catch (\Throwable $th) {
                     app('log')->warning(
-                        'Cannot send verification email to this address: '.$user->email.'; '.$th->getMessage()
+                        __('laravel-auth-api::translation.update_account.cannot_send_email_verification').$user->email.'; '.$th->getMessage()
                     );
                 }
             }
         }
 
-        return ApiResponse::send(['status' => 'Account updated successfully'], 1, 200, 'Account updated successfully');
+        return ApiResponse::send(['status' => __('laravel-auth-api::translation.update_account.success')], 1, 200, __('laravel-auth-api::translation.update_account.success'));
     }
 }

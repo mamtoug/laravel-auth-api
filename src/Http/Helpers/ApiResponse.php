@@ -37,11 +37,10 @@ class ApiResponse
     /**
      * setup, build and return the response.
      *
-     * @param array  $data         An array of returned data
-     * @param int    $status       true or false for the operation status
-     * @param int    $responseCode the Http response code
-     * @param string $message      response message
-     *
+     * @param  array  $data  An array of returned data
+     * @param  int  $status  true or false for the operation status
+     * @param  int  $responseCode  the Http response code
+     * @param  string  $message  response message
      * @return \Illuminate\Http\Response
      */
     public static function send($data, $status = true, $responseCode = ResponseCode::HTTP_OK, string $message = '')
