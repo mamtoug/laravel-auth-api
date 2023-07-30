@@ -1,11 +1,11 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Models;
+namespace Mamtoug\LaravelAuthApi\Models;
 
 use Laravel\Passport\HasApiTokens;
-use MedianetDev\LaravelAuthApi\Http\Controllers\Interfaces\MustVerifyEmail;
-use MedianetDev\LaravelAuthApi\Models\Traits\InheritsRelationsFromParentModel;
-use MedianetDev\LaravelAuthApi\Models\User as Authenticatable;
+use Mamtoug\LaravelAuthApi\Http\Controllers\Interfaces\MustVerifyEmail;
+use Mamtoug\LaravelAuthApi\Models\Traits\InheritsRelationsFromParentModel;
+use Mamtoug\LaravelAuthApi\Models\User as Authenticatable;
 
 class ApiUser extends Authenticatable implements MustVerifyEmail
 {

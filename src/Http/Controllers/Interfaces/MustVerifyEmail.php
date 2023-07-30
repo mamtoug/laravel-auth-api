@@ -1,6 +1,6 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers\Interfaces;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers\Interfaces;
 
 interface MustVerifyEmail
 {

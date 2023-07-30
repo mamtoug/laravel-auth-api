@@ -1,6 +1,6 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Requests;
+namespace Mamtoug\LaravelAuthApi\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

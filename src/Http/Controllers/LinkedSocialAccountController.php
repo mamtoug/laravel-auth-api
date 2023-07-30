@@ -1,11 +1,11 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers;
 
-use MedianetDev\LaravelAuthApi\Http\Helpers\ApiResponse;
-use MedianetDev\LaravelAuthApi\Http\Requests\SocialAccountRequest;
-use MedianetDev\LaravelAuthApi\Models\ApiUser;
-use MedianetDev\LaravelAuthApi\Models\LinkedSocialAccount;
+use Mamtoug\LaravelAuthApi\Http\Helpers\ApiResponse;
+use Mamtoug\LaravelAuthApi\Http\Requests\SocialAccountRequest;
+use Mamtoug\LaravelAuthApi\Models\ApiUser;
+use Mamtoug\LaravelAuthApi\Models\LinkedSocialAccount;
 
 class LinkedSocialAccountController extends Controller
 {
@@ -58,6 +58,6 @@ class LinkedSocialAccountController extends Controller
     {
         return LinkedSocialAccount::where('provider_name', $request->provider_name)
             ->where('provider_id', $request->provider_id)
-            ->first();
+            ->last();
     }
 }

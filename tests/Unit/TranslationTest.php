@@ -1,8 +1,8 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Tests\Unit;
+namespace Mamtoug\LaravelAuthApi\Tests\Unit;
 
-use MedianetDev\LaravelAuthApi\Tests\TestCase;
+use Mamtoug\LaravelAuthApi\Tests\TestCase;
 
 class TranslationTest extends TestCase
 {

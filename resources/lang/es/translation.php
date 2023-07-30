@@ -4,6 +4,7 @@ return [
     'failed_authentication' => '¡Credenciales incorrectas! Inténtalo de nuevo',
     'unauthorized' => 'No autorizado',
     'account_created' => 'Cuenta creada con éxito',
+    'unique_email_validation' => 'La dirección de correo electrónico ya está en uso',
     'access' => [
         'users' => [
             'delete_user_confirm' => '¿Está seguro de que desea eliminar este usuario de forma permanente? Cualquier parte de la aplicación que haga referencia a la identificación de este usuario probablemente generará un error. Proceda bajo su propio riesgo. Esto no se puede deshacer.',

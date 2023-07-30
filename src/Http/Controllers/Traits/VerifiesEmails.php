@@ -1,11 +1,11 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers\Traits;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers\Traits;
 
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use MedianetDev\LaravelAuthApi\Http\Helpers\ApiResponse;
+use Mamtoug\LaravelAuthApi\Http\Helpers\ApiResponse;
 
 trait VerifiesEmails
 {

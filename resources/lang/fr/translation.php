@@ -4,6 +4,7 @@ return [
     'failed_authentication' => 'Mauvais identifiants ! Veuillez réessayer',
     'unauthorized' => 'Non autorisé',
     'account_created' => 'Compte créé avec succès',
+    'unique_email_validation' => 'L’adresse mail est déjà utilisée.',
     'access' => [
         'users' => [
             'delete_user_confirm' => 'Voulez-vous vraiment supprimer définitivement cet utilisateur ? Partout dans l\'application qui fait référence à l\'identifiant de cet utilisateur, il y aura très probablement une erreur. Procédez à vos risques et périls. Ça ne peut pas être annulé.',

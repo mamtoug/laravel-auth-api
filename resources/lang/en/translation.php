@@ -4,7 +4,7 @@ return [
     'failed_authentication' => 'Wrong credentials! Please try again',
     'unauthorized' => 'Unauthorized',
     'account_created' => 'Account created successfully',
-
+    'unique_email_validation' => 'The email address is already in use.',
     'access' => [
         'users' => [
             'delete_user_confirm' => 'Are you sure you want to delete this user permanently? Anywhere in the application that references this user\'s id will most likely error. Proceed at your own risk. This can not be un-done.',

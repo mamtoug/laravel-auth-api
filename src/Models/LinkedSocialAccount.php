@@ -1,6 +1,6 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Models;
+namespace Mamtoug\LaravelAuthApi\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

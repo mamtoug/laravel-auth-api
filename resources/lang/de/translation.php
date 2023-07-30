@@ -4,6 +4,8 @@ return [
     'failed_authentication' => 'Falsche Anmeldeinformationen! Bitte versuche es erneut',
     'unauthorized' => 'Nicht autorisiert',
     'account_created' => 'Konto erfolgreich erstellt',
+    'unique_email_validation' => 'die E-Mail-Adresse ist bereits vergeben',
+
     'access' => [
         'users' => [
             'delete_user_confirm' => 'Sind Sie sicher, dass Sie diesen Benutzer dauerhaft löschen möchten? Überall in der Anwendung, die auf die ID dieses Benutzers verweist, wird höchstwahrscheinlich ein Fehler auftreten. Das Vorgehen erfolgt auf eigene Gefahr. Das kann nicht rückgängig gemacht werden.',

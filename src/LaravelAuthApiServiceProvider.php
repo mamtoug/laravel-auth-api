@@ -1,13 +1,13 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi;
+namespace Mamtoug\LaravelAuthApi;
 
 use Illuminate\Support\ServiceProvider;
 
 class LaravelAuthApiServiceProvider extends ServiceProvider
 {
     protected $commands = [
-        \MedianetDev\LaravelAuthApi\Console\Commands\PublishApiUserModel::class,
+        \Mamtoug\LaravelAuthApi\Console\Commands\PublishApiUserModel::class,
     ];
 
     /**
@@ -75,7 +75,7 @@ class LaravelAuthApiServiceProvider extends ServiceProvider
         [
             'apiauth' => [
                 'driver'  => 'eloquent',
-                'model'   => config('laravel-auth-api.user_model_fqn') ?: \MedianetDev\LaravelAuthApi\Models\ApiUser::class,
+                'model'   => config('laravel-auth-api.user_model_fqn') ?: \Mamtoug\LaravelAuthApi\Models\ApiUser::class,
             ],
         ];
         // add the backpack_users password broker to the configuration

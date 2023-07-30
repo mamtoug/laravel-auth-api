@@ -4,6 +4,7 @@ return [
     'failed_authentication' => 'Yanlış kimlik bilgileri! Lütfen tekrar deneyin',
     'unauthorized' => 'Yetkisiz',
     'account_created' => 'Hesap başarıyla oluşturuldu',
+    'unique_email_validation' => "Bu email adresi zaten kullanılıyor",
     'access' => [
         'users' => [
             'delete_user_confirm' => 'Bu kullanıcıyı kalıcı olarak silmek istediğinizden emin misiniz? Uygulamada bu kullanıcının kimliğine atıfta bulunan herhangi bir yer büyük olasılıkla hata verecektir. Kendi sorumluluğunuzdadır devam edin. Bu geri alınamaz.',

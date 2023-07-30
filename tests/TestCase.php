@@ -1,10 +1,10 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Tests;
+namespace Mamtoug\LaravelAuthApi\Tests;
 
 use Faker\Factory;
 use Laravel\Passport\PassportServiceProvider;
-use MedianetDev\LaravelAuthApi\LaravelAuthApiServiceProvider;
+use Mamtoug\LaravelAuthApi\LaravelAuthApiServiceProvider;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
 class TestCase extends TestbenchTestCase

@@ -1,8 +1,8 @@
 {
-    "name": "medianet-dev/laravel-auth-api",
+    "name": "mamtoug/laravel-auth-api",
     "description": "Laravel Auth over api",
     "keywords": [
-        "medianet-dev",
+        "mamtoug",
         "laravel-auth-api"
     ],
     "homepage": "http://www.medianet.com.tn",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MedianetDev\\LaravelAuthApi\\": "src"
+            "Mamtoug\\LaravelAuthApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MedianetDev\\LaravelAuthApi\\Tests\\": "tests"
+            "Mamtoug\\LaravelAuthApi\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,10 +43,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MedianetDev\\LaravelAuthApi\\LaravelAuthApiServiceProvider"
+                "Mamtoug\\LaravelAuthApi\\LaravelAuthApiServiceProvider"
             ],
             "aliases": {
-                "LaravelAuthApi": "MedianetDev\\LaravelAuthApi\\LaravelAuthApiFacade"
+                "LaravelAuthApi": "Mamtoug\\LaravelAuthApi\\LaravelAuthApiFacade"
             }
         }
     }

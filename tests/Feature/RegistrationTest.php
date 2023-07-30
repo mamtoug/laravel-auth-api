@@ -1,8 +1,8 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Tests\Feature;
+namespace Mamtoug\LaravelAuthApi\Tests\Feature;
 
-use MedianetDev\LaravelAuthApi\Tests\TestCase;
+use Mamtoug\LaravelAuthApi\Tests\TestCase;
 
 class RegistrationTest extends TestCase
 {

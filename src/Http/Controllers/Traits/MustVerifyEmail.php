@@ -1,6 +1,6 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers\Traits;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers\Traits;
 
 trait MustVerifyEmail
 {

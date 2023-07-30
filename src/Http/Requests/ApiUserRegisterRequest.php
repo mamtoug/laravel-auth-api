@@ -1,6 +1,6 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Requests;
+namespace Mamtoug\LaravelAuthApi\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -41,7 +41,7 @@ class ApiUserRegisterRequest extends FormRequest
     public function messages()
     {
         return array_merge([
-            //
+            'email.unique' => __('laravel-auth-api::translation.unique_email_validation'),
         ], config('laravel-auth-api.extra_columns_validation_message'));
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use MedianetDev\LaravelAuthApi\Http\Helpers\ApiResponse;
-use MedianetDev\LaravelAuthApi\Http\Requests\ApiUserLoginRequest as LoginRequest;
-use MedianetDev\LaravelAuthApi\Http\Requests\ApiUserRegisterRequest as RegisterRequest;
+use Mamtoug\LaravelAuthApi\Http\Helpers\ApiResponse;
+use Mamtoug\LaravelAuthApi\Http\Requests\ApiUserLoginRequest as LoginRequest;
+use Mamtoug\LaravelAuthApi\Http\Requests\ApiUserRegisterRequest as RegisterRequest;
 
 class ApiLoginRegisterController extends Controller
 {

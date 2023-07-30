@@ -2,17 +2,17 @@
 
 /*
 |--------------------------------------------------------------------------
-| MedianetDev\LaravelAuthApi
+| Mamtoug\LaravelAuthApi
 |--------------------------------------------------------------------------
 |
 | This file is where you may define all of the routes that are
-| handled by the MedianetDev\LaravelAuthApi.
+| handled by the Mamtoug\LaravelAuthApi.
 |
 */
 
 Route::group(
     [
-        'namespace' => 'MedianetDev\LaravelAuthApi\Http\Controllers',
+        'namespace' => 'Mamtoug\LaravelAuthApi\Http\Controllers',
         'middleware' => 'api',
         'prefix' => config('laravel-auth-api.route_prefix'),
     ],

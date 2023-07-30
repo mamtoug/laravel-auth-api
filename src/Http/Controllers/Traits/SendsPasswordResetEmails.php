@@ -1,11 +1,11 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers\Traits;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
-use MedianetDev\LaravelAuthApi\Http\Helpers\ApiResponse;
-use MedianetDev\LaravelAuthApi\Models\ApiUser;
+use Mamtoug\LaravelAuthApi\Http\Helpers\ApiResponse;
+use Mamtoug\LaravelAuthApi\Models\ApiUser;
 
 trait SendsPasswordResetEmails
 {

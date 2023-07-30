@@ -4,6 +4,8 @@ return [
     'failed_authentication' => 'Credenziali sbagliate! Per favore riprova',
     'unauthorized' => 'Non autorizzato',
     'account_created' => 'Account creato con successo',
+    'unique_email_validation' => "l'indirizzo e-mail è già in uso",
+
     'access' => [
         'users' => [
             'delete_user_confirm' => 'Sei sicuro di voler eliminare definitivamente questo utente? Ovunque nell\'applicazione che fa riferimento all\'ID di questo utente molto probabilmente si verificherà un errore. Procedete a vostro rischio. Questo non può essere annullato.',

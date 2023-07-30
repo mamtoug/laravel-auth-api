@@ -1,10 +1,10 @@
 <?php
 
-namespace MedianetDev\LaravelAuthApi\Http\Controllers;
+namespace Mamtoug\LaravelAuthApi\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use MedianetDev\LaravelAuthApi\Http\Helpers\ApiResponse;
-use MedianetDev\LaravelAuthApi\Http\Requests\ChangeUserProfileInfoRequest;
+use Mamtoug\LaravelAuthApi\Http\Helpers\ApiResponse;
+use Mamtoug\LaravelAuthApi\Http\Requests\ChangeUserProfileInfoRequest;
 
 class ChangeUserProfileInfoController extends Controller
 {
