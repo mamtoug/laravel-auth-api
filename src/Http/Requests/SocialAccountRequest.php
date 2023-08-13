@@ -27,7 +27,7 @@ class SocialAccountRequest extends FormRequest
             'name' => 'required',
             'provider_name' => 'required',
             'provider_id' => 'required',
-            'email' => 'required|email',
+            'email' => 'email',
         ];
     }
 }

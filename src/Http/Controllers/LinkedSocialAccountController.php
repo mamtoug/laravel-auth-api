@@ -23,8 +23,14 @@ class LinkedSocialAccountController extends Controller
             ], 1, 200, __('laravel-auth-api::translation.linked_social.find_associated', ['provider_name' => $request->provider_name]));
         }
 
-        // try to get a user with the given email address
-        $user = ApiUser::where('email', $request->email)->first();
+        if (strtolower($request->provider_name) === "apple"){
+            // try to get a user with the given email address
+            $user = ApiUser::where('provider_id', $request->provider_id)->first();
+        }else{
+            // try to get a user with the given email address
+            $user = ApiUser::where('email', $request->email)->first();
+        }
+
 
         // if there is no user with that email address create one
         $newUser = false;
@@ -58,6 +64,6 @@ class LinkedSocialAccountController extends Controller
     {
         return LinkedSocialAccount::where('provider_name', $request->provider_name)
             ->where('provider_id', $request->provider_id)
-            ->last();
+            ->orderBy('id', 'desc')->first();
     }
 }

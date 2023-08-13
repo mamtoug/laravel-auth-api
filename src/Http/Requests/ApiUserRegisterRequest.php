@@ -27,7 +27,7 @@ class ApiUserRegisterRequest extends FormRequest
 
         return array_merge([
             'name' => 'required|min:4|max:20',
-            'email' => 'required|unique:'.(new $user)->getTable().',email',
+            'email' => 'unique:'.(new $user)->getTable().',email',
             'password' => 'required|min:8',
             'c_password' => 'required|same:password',
         ], config('laravel-auth-api.extra_columns'));
