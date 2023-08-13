@@ -35,6 +35,8 @@ class LinkedSocialAccountController extends Controller
         // if there is no user with that email address create one
         $newUser = false;
         if (! $user) {
+            $request->email = $this->generateFakeEmail(10);
+
             $user = ApiUser::create($request->only(
                 array_merge(['name', 'email'], array_keys(config('laravel-auth-api.extra_columns')))
             ));
@@ -66,4 +68,17 @@ class LinkedSocialAccountController extends Controller
             ->where('provider_id', $request->provider_id)
             ->orderBy('id', 'desc')->first();
     }
+
+
+    public  function generateFakeEmail($length = 10, $domain = 'example.com') {
+        $characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        $email = '';
+
+        for ($i = 0; $i < $length; $i++) {
+            $email .= $characters[rand(0, strlen($characters) - 1)];
+        }
+
+        return $email . '@' . $domain;
+    }
+
 }
