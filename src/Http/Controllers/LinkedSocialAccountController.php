@@ -70,7 +70,7 @@ class LinkedSocialAccountController extends Controller
     }
 
 
-    public  function generateFakeEmail($length = 10, $domain = 'example.com') {
+    private  function generateFakeEmail($length = 10, $domain = 'example.com') {
         $characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
         $email = '';
 
