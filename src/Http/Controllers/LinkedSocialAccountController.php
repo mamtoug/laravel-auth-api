@@ -37,7 +37,9 @@ class LinkedSocialAccountController extends Controller
         $newUser = false;
         if (! $user) {
 
-            $request->merge(['email' => $this->generateFakeEmail(10)]);
+            if ( $request->email == null ) {
+                $request->merge(['email' => $this->generateFakeEmail(10)]);
+            }
 
             $user = ApiUser::create($request->only(
                 array_merge(['name', 'email'], array_keys(config('laravel-auth-api.extra_columns')))
