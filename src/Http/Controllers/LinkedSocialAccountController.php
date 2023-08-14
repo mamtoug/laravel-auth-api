@@ -25,7 +25,8 @@ class LinkedSocialAccountController extends Controller
 
         if (strtolower($request->provider_name) === "apple"){
             // try to get a user with the given email address
-            $user = ApiUser::where('provider_id', $request->provider_id)->first();
+            $linked = LinkedSocialAccount::where('provider_id', $request->provider_id)->first();
+            $user = is_object($linked)  ? $linked->user : null ;
         }else{
             // try to get a user with the given email address
             $user = ApiUser::where('email', $request->email)->first();
@@ -35,7 +36,8 @@ class LinkedSocialAccountController extends Controller
         // if there is no user with that email address create one
         $newUser = false;
         if (! $user) {
-            $request->email = $this->generateFakeEmail(10);
+
+            $request->merge(['email' => $this->generateFakeEmail(10)]);
 
             $user = ApiUser::create($request->only(
                 array_merge(['name', 'email'], array_keys(config('laravel-auth-api.extra_columns')))
